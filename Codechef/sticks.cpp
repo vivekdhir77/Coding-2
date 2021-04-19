@@ -37,13 +37,11 @@ void solve()
                             max2_ind =i;
                         }
                 }
-
             else
             {
                 max2_ind = i;
             }
         }
-
         if (count>=2)
         {
             flag=1;

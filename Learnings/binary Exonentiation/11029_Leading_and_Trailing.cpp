@@ -1,4 +1,3 @@
-//https://onlinejudge.org/indeB.php?option=com_onlinejudge&Itemid=8&categorP=24&page=show_problem&problem=310
 #include<iostream>
 #include<cmath>
 #include<vector>
@@ -20,20 +19,19 @@ int main()
     // freopen("out.txt", "w", stdout);
     // freopen("error.txt", "w", stderr);
     // #endif
-
-    ll B;
-    while(cin>>B)
-    {
-        ll P, M;
-        cin>>P>>M;
-        ll z=1;
-        while(P!=0)
-        {
-            if (P&1)
-            z= z * B%M;
-            B = (B%M * B%M)%M;
-            P/=2; 
-        }
-        cout<< z<<endl;
-    }
+    ll n,k;
+    cin>>n>>k;
+    double lg = k * log10 (n);
+    double ch= pow(10,lg);
+    cout<<lg <<endl;
+    cout<<ch<<endl;
+    ll res = pow (10, 2 +fmod(k * log10 (n),1));
+    cout<<res;
 }
+
+// 2 fmod 1   = 0
+
+// 2.1 fmod 1 = 0.1
+
+// 1 + 1 + 0.1
+// 10 fmod 1  =0.183

@@ -12,6 +12,6 @@ using namespace std;
 
 int main()
 {
-    char ch=true;
+    int ch=3+3*3+3;
     cout<<ch;
 }

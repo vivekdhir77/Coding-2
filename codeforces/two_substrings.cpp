@@ -11,6 +11,41 @@ typedef long long int ll;
 
 using namespace std;
 
+void solve()
+{
+    string s;
+    cin>>s;
+    int i;
+    int n= s.length();
+    for(i=1; i<n;i++)
+    {
+        if(s[i-1]=='A' && s[i]=='B')
+        break;
+    }
+    for(int j=i+2;j<n;j++)
+    {
+        if(s[j-1]=='B' && s[j]=='A')
+        {
+            cout<<"YES\n";
+            return;
+        }
+    }
+    for(i=1; i<n;i++)
+    {
+        if(s[i-1]=='B' && s[i]=='A')
+        break;
+    }
+    for(int j=i+2;j<n;j++)
+    {
+        if(s[j-1]=='A' && s[j]=='B')
+        {
+            cout<<"YES\n";
+            return;
+        }
+    }
+    cout<<"NO\n";
+}
+
 int main()
 {
     VIVEK_DHIR
@@ -20,4 +55,8 @@ int main()
     freopen("error.txt", "w", stderr);
     #endif
 
+    int t=1;
+    //cin>>t;
+    while(t--)
+    solve();
 }

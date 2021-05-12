@@ -1,5 +1,5 @@
 #include<iostream>
-#define FASTIO ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+#define VIVEK_DHIR ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 using namespace std;
 int winning[][3]={
        {0,1,2},
@@ -72,7 +72,7 @@ void solve()
 }
 int main()
 {
-    FASTIO
+    VIVEK_DHIR
     int t;
     cin>>t;
     while(t--)

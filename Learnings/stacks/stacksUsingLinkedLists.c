@@ -58,6 +58,35 @@ int pop(struct Node** top)
     free(temp);
     return init_top_data;
 }
+
+int peek(struct Node* top, int pos)
+{
+    struct Node* ptr = top;
+    for (int i=0;(ptr!=NULL && i<pos-1);i++)
+    {
+        ptr = ptr->next;
+    }
+    if(ptr!=NULL)
+    return ptr->data;
+    else
+    return -1;
+}
+
+int stackTop(struct Node* top)
+{
+    return top->data;
+}
+
+int stackBottom(struct Node* top)
+{
+    struct Node* ptr =top;
+    while(ptr->next!=NULL)
+    {
+        ptr = ptr->next;
+    }
+    return ptr->data;
+}
+
 void traversal(struct Node* head)
 {
     while(head!= NULL)
@@ -67,6 +96,7 @@ void traversal(struct Node* head)
     }
     printf("NULL\n");
 }
+
 int main()
 {
     struct Node* top=NULL;
@@ -80,7 +110,8 @@ int main()
     int a = pop(&top);
     printf("popped element is = %d\n",a);
     traversal(top);
-    
-
-
+    a = peek(top,4);
+    printf("at pos 4= %d\n",a);
+    printf("stack top= %d\n", stackTop(top));
+    printf("stack bottom= %d\n", stackBottom(top));
 }

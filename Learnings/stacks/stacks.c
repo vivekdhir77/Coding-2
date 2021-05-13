@@ -14,7 +14,6 @@ int isEmpty(struct stack *ptr)
         return 1;
     else
         return 0;
-    
 }
 
 int isFull(struct stack *ptr)
@@ -25,24 +24,24 @@ int isFull(struct stack *ptr)
         return 0;
 }
 
-void push(struct stack *ptr,int val)
+void push(struct stack *ptr, int val)
 {
-     if (isFull(ptr))
-    printf("stack overflow");
+    if (isFull(ptr))
+        printf("stack overflow");
     else
     {
-    ptr->top++;
-    ptr->arr[ptr->top]=val;
+        ptr->top++;
+        ptr->arr[ptr->top] = val;
     }
 }
 int pop(struct stack *ptr)
 {
     if (isEmpty(ptr))
-    printf("stack underflow");
+        printf("stack underflow");
     else
     {
-        int temp= ptr->arr[ptr->top];
-        ptr->top-=1;
+        int temp = ptr->arr[ptr->top];
+        ptr->top -= 1;
         return temp;
     }
     return -1;
@@ -50,7 +49,7 @@ int pop(struct stack *ptr)
 
 int main()
 {
-    struct stack *s=(struct stack *)malloc(sizeof(struct stack));
+    struct stack *s = (struct stack *)malloc(sizeof(struct stack));
     s->size = 80;
     s->top = -1;
     s->arr = (int *)malloc(s->size * sizeof(int));
@@ -62,16 +61,15 @@ int main()
     push(s, 15);
     push(s, 490);
     push(s, 81);
-    
-    printf("%d\n",pop(s));
-    printf("%d\n",pop(s));
-    printf("%d\n",pop(s));
-    printf("%d\n",pop(s));
-    printf("%d\n",pop(s));
-    printf("%d\n",pop(s));
-    
 
-    if(isEmpty(s))
+    printf("%d\n", pop(s));
+    printf("%d\n", pop(s));
+    printf("%d\n", pop(s));
+    printf("%d\n", pop(s));
+    printf("%d\n", pop(s));
+    printf("%d\n", pop(s));
+
+    if (isEmpty(s))
         printf("The stack is empty");
     else
         printf("The stack is not empty");
@@ -145,7 +143,7 @@ int main()
 //     push(sp, 57);
 //     push(sp, 46);
 //     push(sp, 89);
-//     push(sp, 6); // ---> Pushed 10 values 
+//     push(sp, 6); // ---> Pushed 10 values
 //     // push(sp, 46); // Stack Overflow since the size of the stack is 10
 //     printf("After pushing, Full: %d\n", isFull(sp));
 //     printf("After pushing, Empty: %d\n", isEmpty(sp));

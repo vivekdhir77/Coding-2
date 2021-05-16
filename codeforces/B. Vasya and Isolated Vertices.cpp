@@ -11,7 +11,7 @@ typedef long long int ll;
 #define VIVEK_DHIR ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 #define in(t) ll t;cin>>t;
 #define tc(t) while(t--)
-
+ 
 int main()
 {
     VIVEK_DHIR
@@ -23,8 +23,14 @@ int main()
     in(n);
     in(m);
     int min = max(0, n - 2 * m);
-    
-    
+    ll temp = (n*(n - 1))/2;
+    cout<<min<<" ";
+        for(ll i = 0; i<=n; i++){
+            if(i*(i - 1)/2 >= m){
+                cout<<n - i<<"\n";
+                break;
+            }
+        }
 }
 /*
 n,m=map(int,raw_input().split())
@@ -38,3 +44,15 @@ if m:
 else:
     print n
 */
+/*
+n,m = map(int, input().split())
+print(max(0, n-m*2))
+if m:
+    x=0
+    while(m>x):
+        m-=x
+        x+=1
+    print(n-x-1)
+else:
+    print(n)
+    */

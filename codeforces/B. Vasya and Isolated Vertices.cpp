@@ -33,18 +33,6 @@ int main()
         }
 }
 /*
-n,m=map(int,raw_input().split())
-print max(0,n-m*2),
-if m:
-    x=0
-    while m>x:
-        m-=x
-        x+=1
-    print n-x-1
-else:
-    print n
-*/
-/*
 n,m = map(int, input().split())
 print(max(0, n-m*2))
 if m:
@@ -55,4 +43,4 @@ if m:
     print(n-x-1)
 else:
     print(n)
-    */
+*/

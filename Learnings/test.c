@@ -11,11 +11,14 @@ typedef long long int ll;
 #define in(t) int t;scanf("%d",&t);
 #define pt(t) printf("%d",t);
 #define tc(t) while(t--)
+
 int main()
 {
-    int a=500,b=100,c;
-    if(!(a>=400))
-    b=300;
-    c=200;
-    printf("b= %d c=%d\n",b,c);
+    VIVEK_DHIR
+    int a[5]={1,2,3,4,5};
+
+    printf("%p\n",a);
+    printf("%p\n",&a);
+    printf("%p\n",&a[0]);
+    
 }

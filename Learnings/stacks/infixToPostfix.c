@@ -128,5 +128,4 @@ int main()
 {
     char *infix = "x-y/z-k*d";
     printf("postfix is %s", infixToPostfix(infix));
-    return 0;
 }

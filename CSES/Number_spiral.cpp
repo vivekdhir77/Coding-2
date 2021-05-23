@@ -12,27 +12,24 @@ typedef long long int ll;
 #define in(t) ll t;cin>>t;
 #define tc(t) while(t--)
 
-void solve()
-{
-    in(k);
-    float e = 
-    float a = 100.0/k;
-    int b = 100/k;
-    if ((a-b)==0)
-    cout<<b<<endl;
-    else
-    cout<<"100"<<endl;
-}
-
 int main()
 {
     VIVEK_DHIR
-// #ifndef ONLINE_JUDGE
-//     freopen("in.txt", "r", stdin);
-//     freopen("out.txt", "w", stdout);
-//     freopen("error.txt", "w", stderr);
-// #endif
-    in(t);
-    tc(t)
-    solve();
+#ifndef ONLINE_JUDGE
+    freopen("in.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
+    freopen("error.txt", "w", stderr);
+#endif
+    int t ,row, clmn;
+    scanf("%d",&t);
+    while(t--)
+    {
+        scanf("%d %d",&row,&clmn);
+        int z=max(row,clmn);
+        if(row%2)
+        {
+            
+        }
+    }
+
 }

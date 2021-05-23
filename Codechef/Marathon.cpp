@@ -9,30 +9,24 @@ typedef long long int ll;
 #define FA(i, start, end) for (int i = start; i < end; i++)
 #define FD(i, start, end) for (int i = start; i >= end; i--)
 #define VIVEK_DHIR ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
-#define in(t) \
-    ll t;     \
-    cin >> t;
-#define tc(t) while (t--)
-
-void solve()
-{
-    in(n);
-    ll ans =0;
-    for (int i = 32; i >=0; i--)
-    {
-        if(((n>>i)&1)) // or we can put if((1<<i)&n)
-        {
-            ans = (1<<i)-1;
-            break;
-        }
-    }
-    cout<<ans<<endl;
-}
+#define in(t) ll t;cin>>t;
+#define tc(t) while(t--)
 
 int main()
 {
     VIVEK_DHIR
     in(t);
     tc(t)
-        solve();
+    {
+        in(D);in(d);in(A);in(B); in(C);
+        int ans = D*d;
+        if(ans>=42)
+        cout<<C<<endl;
+        else if(ans>=21)
+        cout<<B<<endl;
+        else if(ans>=10)
+        cout<<A<<endl;
+        else
+        cout<<"0\n";
+    }
 }
